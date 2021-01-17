@@ -13,10 +13,10 @@ document.addEventListener('click', event => {
   if (event.target.className === 'devoured') {
     axios.put(`/api/burgers/${event.target.dataset.id}`, { devoured: true })
     .then(() => location.reload())
-    .catch(err => console.error(err))
+    .catch(err => console.log(err))
   } else if (event.target.className === 'delete') {
     axios.delete(`/api/burgers/${event.target.dataset.id}`)
       .then(() => location.reload())
-      .catch(err => console.error(err))
+      .catch(err => console.log(err))
   }
 })
