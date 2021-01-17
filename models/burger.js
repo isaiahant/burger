@@ -5,7 +5,7 @@ const burger = {
     orm.getAll('burgers', burgers => cb(burgers))
   },
   create (burger, cb) {
-    orm.create('burgers', burger, () => cb())
+    orm.create('burgers', burgers, () => cb())
   },
   update (changes, id, cb) {
     orm.update('burgers', changes, { id }, () => cb())
