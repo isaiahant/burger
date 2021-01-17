@@ -1,7 +1,7 @@
 
 document.getElementById('addUser').addEventListener('click', event => {
   event.preventDefault()
-  axios.post('/api/users', {
+  axios.post('/api/burgers', {
     name: document.getElementById('name').value,
     isHere: false
   })
