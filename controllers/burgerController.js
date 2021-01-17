@@ -1,6 +1,6 @@
 const router = require('express').Router()
 const burger = require('../models/burger.js')
-const user = require('../models/burger.js')
+
 
 
 router.get('/burgers', (req, res) => 
