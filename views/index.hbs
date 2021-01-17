@@ -17,7 +17,15 @@
       <h4>Not Devoured</h4>
       {{#each burgers}}
       {{#unless this.devoured}}
-      <p class="devoured" data-id="{{this.id}}">{{ this.name }}</p>
+      <div class="card">
+        <div class="card-body">
+          <p>
+            {{ this.name }}
+            <button data-id="{{this.id}}" type="button" class="devoured btn btn-danger" style="float:right;">Eat
+              Burger</button>
+          </p>
+        </div>
+      </div>
       {{/unless}}
       {{/each}}
     </div>
@@ -25,8 +33,12 @@
       <h4>Devoured</h4>
       {{#each burgers}}
       {{#if this.devoured}}
-      <p class="delete" data-id="{{this.id}}">{{ this.name }}</p>
-      {{/if}}
+      <div class="card">
+        <div class="card-body">
+          <p data-id="{{this.id}}">{{ this.name }}</p>
+        </div>
+      </div>
+       {{/if}}
       {{/each}}
     </div>
   </div>
