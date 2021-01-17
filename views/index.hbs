@@ -1,32 +1,32 @@
-<h1>Burger Town</h1>
+<h1>Attendance Portal</h1>
 
 <div class="container">
   <div class="row">
     <form>
       <p>
-        <label for="name">Burger Name</label>
+        <label for="name">name</label>
         <input type="text" name="name" id="name">
       </p>
       <p>
-        <button id="addBurger">Add Burger</button>
+        <button id="addUser">Add User</button>
       </p>
     </form>
   </div>
   <div class="row">
     <div class="col-md-6">
-      <h4>Not Devoured</h4>
-      {{#each burgers}}
-      {{#unless this.devoured}}
-      <p class="devoured" data-id="{{this.id}}">{{ this.name }}</p>
+      <h4>Not Present</h4>
+      {{#each users}}
+      {{#unless this.isHere}}
+      <p class="isHere" data-id="{{this.id}}">{{ this.name }}</p>
       {{/unless}}
       {{/each}}
     </div>
     <div class="col-md-6">
-      <h4>Devoured</h4>
-      {{#each burgers}}
-      {{#if this.devoured}}
+      <h4>Present</h4>
+      {{#each users}}
+      {{#if this.isHere}}
       <p class="delete" data-id="{{this.id}}">{{ this.name }}</p>
-       {{/if}}
+      {{/if}}
       {{/each}}
     </div>
   </div>

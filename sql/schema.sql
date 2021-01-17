@@ -1,0 +1,11 @@
+DROP DATABASE IF EXISTS users_db;
+
+CREATE DATABASE users_db;
+
+USE users_db;
+
+CREATE TABLE users (
+	id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    name VARCHAR(50) NOT NULL,
+    isHere BOOL NOT NULL
+);
