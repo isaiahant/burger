@@ -6,7 +6,7 @@ document.getElementById('addBurger').addEventListener('click', event => {
     devoured: false
   })
     .then(() => location.reload())
-    .catch(err => console.error(err))
+    .catch(err => console.log(err))
 })
 
 document.addEventListener('click', event => {
