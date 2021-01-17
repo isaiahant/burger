@@ -17,7 +17,7 @@
       <h4>Not Devoured</h4>
       {{#each burgers}}
       {{#unless this.devoured}}
-      <p class="devoured" data-id="{{this.id}}">{{ this.burgerName }}</p>
+      <p class="devoured" data-id="{{this.id}}">{{ this.name }}</p>
       {{/unless}}
       {{/each}}
     </div>
@@ -25,7 +25,7 @@
       <h4>Devoured</h4>
       {{#each burgers}}
       {{#if this.devoured}}
-      <p class="delete" data-id="{{this.id}}">{{ this.burgerName }}</p>
+      <p class="delete" data-id="{{this.id}}">{{ this.name }}</p>
       {{/if}}
       {{/each}}
     </div>
