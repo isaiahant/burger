@@ -2,7 +2,7 @@
 document.getElementById('addBurger').addEventListener('click', event => {
   event.preventDefault()
   axios.post('/api/burgers', {
-    name: document.getElementById('name').value,
+    burgerName: document.getElementById('name').value,
     devoured: false
   })
     .then(() => location.reload())
